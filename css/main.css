@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 1rem;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    background: linear-gradient(to right, #88d7e7, #748593);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+   margin: 0.5rem 0;
+   display: inline-block;
+   position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 0.5rem;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li ul li a {
+    color: #333;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+   
+}
+
+.float-image {
+    float: left;
+    margin-right: 1rem;
+    shape-outside: margin-box;
+    width: 200px;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+table th {
+    background-color: #0777a7;
+    color: white;
+}
+
+aside {
+    background-image: url('../images/aside-bg.jpg');
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border: 3px solid #4e5b61;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #70506f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #816482;
+}
+
+footer {
+    background: linear-gradient(to right, #827c62, #a19ea1);
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+
+        
+.form-control {
+    border: 2px solid #4caf50; 
+    border-radius: 10px; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
+}
+
+.form-control:focus {
+    border-color: #007bff; 
+    background-color: #e9f7fe; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.btn-custom {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+    }
+
+    .float-image {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    aside {
+        background-image: url('../images/aside-bg-mobile.jpg');
+    }
+}
+
+/* Media Query: Tablets (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    nav ul {
+        flex-direction: row; /* Horizontal navigation */
+        justify-content: center;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    aside {
+        font-size: 1rem;
+        background-image: url('../images/aside-bg-tablet.jpg'); /* Tablet-specific background */
+    }
+}
+
+/* Media Query: Desktops (>1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    aside {
+        flex: 1;
+        font-size: 1rem;
+        background-image: url('../images/aside-bg-desktop.jpg'); /* Desktop-specific background */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* More columns for larger screens */
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* Base (Mobile First) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    gap: 1rem;
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktops */
+    }
+}
